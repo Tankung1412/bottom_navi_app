@@ -1,4 +1,7 @@
+import 'package:bottom_navi_app/help.dart';
 import 'package:bottom_navi_app/home.dart';
+import 'package:bottom_navi_app/member.dart';
+import 'package:bottom_navi_app/product.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +28,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _naviItemIndex = 0; ///ลำดับของปุ่มที่เลือก
-  var pages = <Widget> [const HomePage()];
+  var pages = <Widget> [const HomePage(), const Product(), const Member(), const Help()];
   
   @override
   Widget build(BuildContext context) {

@@ -1,3 +1,4 @@
+import 'package:bottom_navi_app/product_detail.dart';
 import 'package:flutter/material.dart';
 
 class Product extends StatelessWidget {
@@ -7,16 +8,16 @@ class Product extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Product'),
+        title: const Text('Product'),
       ),
 
-      body: const Center(
+      body: Center(
         child: Column(
           children: [
-            SizedBox(height: 30,),
-            Text('Product Page'),
-            SizedBox(height: 60,),
-            btnDetail(contex),
+            const SizedBox(height: 30,),
+            const Text('Product Page'),
+            const SizedBox(height: 60,),
+            btnDetail(context),
           ],
         ),
       ),
@@ -27,7 +28,7 @@ class Product extends StatelessWidget {
     return TextButton(
       onPressed: () => Navigator.push(
         contex, 
-        MaterialPageRoute(builder: (contex) => ProductDetail())),
+        MaterialPageRoute(builder: (contex) => const ProductDetail())),
       child: const Text('Product Detail'));
   }
 }

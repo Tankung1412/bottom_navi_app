@@ -1,3 +1,4 @@
+import 'package:bottom_navi_app/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,12 +25,13 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _naviItemIndex = 0; ///ลำดับของปุ่มที่เลือก
+  var pages = <Widget> [const HomePage()];
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('BottomNavigationBar'),centerTitle: true,),
-      body: null,
+      appBar: AppBar(title: const Text('BottomNavigationBar'),centerTitle: true,),
+      body: pages[_naviItemIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.deepPurple,
